@@ -56,21 +56,56 @@ addEventListener("mousemove", e => {
 });
 
 /* 5. TOAST + XP SYSTEM */
+
+/* 5. TOAST + XP SYSTEM */
 function toast(msg) {
-  const t = $("#toast"); t.textContent = msg; t.classList.add("show");
-  clearTimeout(t.id); t.id = setTimeout(() => t.classList.remove("show"), 2600);
+  const t = $("#toast");
+  t.textContent = msg;
+  t.classList.add("show");
+  clearTimeout(t.id);
+  t.id = setTimeout(() => t.classList.remove("show"), 2600);
 }
+
 let level = 1;
-addEventListener("scroll", () => {
-  const p = scrollY / (document.body.scrollHeight - innerHeight);
-  $("#xpFill").style.width = Math.min(p * 100, 100) + "%";
-  const nl = Math.min(1 + Math.floor(p * 5), 5);
-  if (nl > level) { level = nl; $("#lvl").textContent = "LV " + level; toast("LEVEL UP! LV " + level); }
+
+function updateLevel() {
+  const maxScroll =
+    document.documentElement.scrollHeight - window.innerHeight;
+
+  const p = maxScroll > 0
+    ? window.scrollY / maxScroll
+    : 0;
+
+  const progress = Math.max(0, Math.min(p, 1));
+  const newLevel = Math.min(5, Math.floor(progress * 5) + 1);
+
+  $("#xpFill").style.width = progress * 100 + "%";
+
+  if (newLevel !== level) {
+    level = newLevel;
+    $("#lvl").textContent = "LV " + level;
+
+    if (level > 1) {
+      toast("LEVEL UP! LV " + level);
+    }
+  }
+
   $$("section").forEach(s => {
     const a = $(`nav a[href="#${s.id}"]`);
-    if (a) a.classList.toggle("on", s.getBoundingClientRect().top < innerHeight / 2 && s.getBoundingClientRect().bottom > innerHeight / 2);
+
+    if (a) {
+      a.classList.toggle(
+        "on",
+        s.getBoundingClientRect().top < innerHeight / 2 &&
+        s.getBoundingClientRect().bottom > innerHeight / 2
+      );
+    }
   });
-});
+}
+
+addEventListener("scroll", updateLevel, { passive: true });
+addEventListener("load", updateLevel);
+
 
 /* 6. SCROLL TRIGGERS: skill meters + badge unlock */
 const io = new IntersectionObserver(es => es.forEach(e => {
