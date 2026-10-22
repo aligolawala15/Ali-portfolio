@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ali Golawala | Player One</title>
+<meta name="description" content="Ali Golawala - BSc IT student, UI/UX and cybersecurity learner.">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="rain"></canvas>
+<div class="glow" id="glow"></div>
+
+<div id="boot"><pre id="bootText"></pre></div>
+
+<!-- HUD -->
+<header class="hud">
+  <a href="#home" class="logo">AG_</a>
+  <div class="xp"><span id="lvl">LV 1</span><div class="bar"><i id="xpFill"></i></div></div>
+  <nav id="nav">
+    <a href="#about">Profile</a><a href="#skills">Skills</a><a href="#badges">Badges</a>
+    <a href="#missions">Missions</a><a href="#terminal">Terminal</a><a href="#contact">Contact</a>
+  </nav>
+  <button id="theme" title="Switch theme"><i class="fa-solid fa-gamepad"></i></button>
+</header>
+
+<main>
+<!-- HERO -->
+<section id="home" class="hero">
+  <div>
+    <p class="tag">PLAYER ONE READY</p>
+    <h1 class="glitch" data-text="ALI GOLAWALA">ALI GOLAWALA</h1>
+    <p class="type">I am a <span id="typed"></span><b class="caret">_</b></p>
+    <p class="lead">Second-year BSc-IT student who designs interfaces, learns ethical hacking and builds things that work.</p>
+    <div class="btns">
+      <a class="btn" href="#missions">Start missions</a>
+      <a class="btn alt" href="https://drive.google.com/file/d/1Hr24m0TBaXQUjzvDWX7Q0hd3dwYDiryZ/view?usp=drive_link" download>Download resume</a>
+    </div>
+  </div>
+  <div class="win">
+    <div class="win-top"><i></i><i></i><i></i><span>ali@portfolio:~</span></div>
+    <pre id="whoami">$ whoami
+ali_golawala
+$ role --current
+student / designer / hacker-in-training
+$ status
+<span class="ok">online</span> and learning</pre>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>Player profile</h2>
+  <div class="grid two">
+    <div class="panel">
+      <p>Hi, I'm <b>Ali Golawala</b>, a second-year BSc-IT student at Anjuman-i-Islam Kalsekar Technical Campus.</p>
+      <p>I like UI/UX design, cybersecurity, programming and football. I learn best by building real things.</p>
+    </div>
+    <div class="stats">
+      <div class="panel tilt"><small>CLASS</small><b>SY BSc-IT</b></div>
+      <div class="panel tilt"><small>MAIN QUEST</small><b>Cybersecurity</b></div>
+      <div class="panel tilt"><small>SIDE QUEST</small><b>UI / UX Design</b></div>
+      <div class="panel tilt"><small>HOBBIES</small><b>Football, Tug of War</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2>Skill tree</h2>
+  <div class="grid skills">
+    <div class="panel tilt"><i class="fa-solid fa-code"></i><h3>Programming</h3><div class="meter" data-v="65"><i></i></div><p>Java, Python, C</p></div>
+    <div class="panel tilt"><i class="fa-solid fa-palette"></i><h3>UI / UX</h3><div class="meter" data-v="75"><i></i></div><p>Figma, wireframes, prototypes</p></div>
+    <div class="panel tilt"><i class="fa-solid fa-user-secret"></i><h3>Cybersecurity</h3><div class="meter" data-v="55"><i></i></div><p>Ethical hacking basics, Nmap</p></div>
+    <div class="panel tilt"><i class="fa-solid fa-globe"></i><h3>Web</h3><div class="meter" data-v="70"><i></i></div><p>HTML, CSS, JavaScript</p></div>
+  </div>
+</section>
+
+<!-- BADGES -->
+
+<section id="badges">
+  <h2>Achievements Unlocked</h2>
+
+  <div class="grid badges">
+
+    <div class="badge">
+      <i class="fa-solid fa-wand-magic-sparkles"></i>
+      <h3>Generative AI</h3>
+      <p>Certification</p>
+      <a href="https://drive.google.com/file/d/1HBAKlkZJrKLuLaoV2C88ekg1gD_PKG2x/view?usp=drive_link"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="certificate-link">
+        <i class="fa-solid fa-certificate"></i> View Certificate
+      </a>
+    </div>
+
+    <div class="badge">
+      <i class="fa-solid fa-user-secret"></i>
+      <h3>Ethical Hacker</h3>
+      <p>Certification</p>
+      <a href="https://drive.google.com/file/d/1BSHVXKeGpYciK6IIwNdlsaELbBxsWLcm/view?usp=drive_link"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="certificate-link">
+        <i class="fa-solid fa-certificate"></i> View Certificate
+      </a>
+    </div>
+
+    <div class="badge">
+      <i class="fa-brands fa-java"></i>
+      <h3>Java</h3>
+      <p>Certification</p>
+      <a href="https://drive.google.com/file/d/11mMNpFUw8qUxWSrXxK6xeQRxxuk6JoJn/view?usp=drive_link"
+         target="_blank"
+         rel="noopener noreferrer" 
+         class="certificate-link">
+        <i class="fa-solid fa-certificate"></i> View Certificate
+      </a>
+    </div>
+
+    <div class="badge">
+      <i class="fa-brands fa-aws"></i>
+      <h3>Generative AI on AWS</h3>
+      <p>Certification</p>
+      <a href="https://drive.google.com/file/d/1173FjKFAU6Z3UxXu0R0VtPAVQ1jLqep5/view?usp=drive_link"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="certificate-link">
+        <i class="fa-solid fa-certificate"></i> View Certificate
+      </a>
+    </div>
+
+    <div class="badge">
+      <i class="fa-solid fa-shield-halved"></i>
+      <h3>Cybersecurity</h3>
+      <p>Certification</p>
+      <a href="https://drive.google.com/file/d/1U7cqtovSKRHtqoxAiY-umE8-8_m4qCFJ/view?usp=drive_link"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="certificate-link">
+        <i class="fa-solid fa-certificate"></i> View Certificate
+      </a>
+    </div>
+    <div class="badge">
+      <i class="fa-solid fa-shield-halved"></i>
+      <h3>UI/UX designer</h3>
+      <p>Certification</p>
+      <a href="https://drive.google.com/file/d/1yqL0npTfmH7mIZOigmcNTgwr_zsmDC60/view?usp=drive_link"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="certificate-link">
+        <i class="fa-solid fa-certificate"></i> View Certificate
+      </a>
+    </div>
+
+
+  </div>
+</section>
+
+
+<!-- MISSIONS -->
+<section id="missions">
+  <h2>Missions</h2>
+  <div class="grid three">
+    <article class="panel tilt"><span class="lv">LEVEL 1</span><h3>UI/UX Project 01</h3><p>Second Figma design with a focus on user experience.</p>
+      <a href="https://www.figma.com/design/EIJatqBWFSQwUZFJsg5B1c/Untitled" target="_blank" rel="noopener">Play mission <i class="fa-solid fa-arrow-up-right-from-square"></i></a></article>
+    <article class="panel tilt"><span class="lv">LEVEL 2</span><h3>Quiz Game</h3><p>A live quiz game built for the web.</p>
+      <a href="https://quiz-game-pearl-pi.vercel.app/#home" target="_blank" rel="noopener">Play mission <i class="fa-solid fa-arrow-up-right-from-square"></i></a></article>
+
+  <article class="panel tilt"><span class="lv">LEVEL 3</span><h3>port scanner</h3><p>A port scanner built with python</p>
+      <a href="https://port-scanner-1-1j15.onrender.com/" target="_blank" rel="noopener">Play mission <i class="fa-solid fa-arrow-up-right-from-square"></i></a></article>
+
+  <article class="panel tilt"><span class="lv">LEVEL 4 </span><h3>Unitex</h3><p>Student learning platform built with</p>
+      <a href="https://unitex-1.onrender.com" target="_blank" rel="noopener">Play mission <i class="fa-solid fa-arrow-up-right-from-square"></i></a></article>
+
+    <article class="panel tilt"><span class="lv">LEVEL 5 </span><h3>Network Sniffer</h3><p>Network monitoring tool built with Python</p>
+      <a href="https://vttbfhdq3szwords7aebkl.streamlit.app/" target="_blank" rel="noopener">Play mission <i class="fa-solid fa-arrow-up-right-from-square"></i></a></article>    
+
+  </div>
+</section>
+
+<!-- TERMINAL -->
+<section id="terminal">
+  <h2>Hack the terminal</h2>
+  <div class="win big" id="term">
+    <div class="win-top"><i></i><i></i><i></i><span>type "help" and press Enter</span></div>
+    <div id="out"></div>
+    <div class="line"><span>$&nbsp;</span><input id="cmd" autocomplete="off" spellcheck="false" aria-label="Terminal command"></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Join my party</h2>
+  <div class="grid two">
+    <a class="panel tilt" href="mailto:aligolawala15@gmail.com"><i class="fa-solid fa-envelope"></i> aligolawala15@gmail.com</a>
+    <a class="panel tilt" href="https://github.com/aligolawala15  " target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> github.com/aligolawala155</a>
+    <a class="panel tilt" href="https://www.linkedin.com/in/ali-golawala-157233365/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> Ali Golawala</a>
+    <a class="panel tilt" href="tel:+918828261911"><i class="fa-solid fa-phone"></i> +91 8828261911</a>
+  </div>
+</section>
+</main>
+
+<footer>© 2026 Ali Golawala. Try the Konami code: ↑ ↑ ↓ ↓ ← → ← → B A</footer>
+<div id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
